@@ -25,10 +25,14 @@ export default {
 }
 .message {
     font-size: 20px;
+    padding-bottom: 15px;
 }
 input {
     border: none;
     border-bottom: 1px solid #d1d1e0;
+    font-size: 20px;
+    color: #2c3e50;
+    text-align: center;
 }
 input:focus {
     outline: none;
