@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <Header msg="Who do? Vue do!"/>
+      <Header msg="Who do? Vue do!"/>
+      <ToDoInput msg="What would you like to do?"/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import Header from './components/layout/Header.vue'
+import ToDoInput from './components/ToDoInput.vue'
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    ToDoInput
   }
 }
 </script>
@@ -20,8 +23,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>
