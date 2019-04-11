@@ -13,7 +13,6 @@ export default {
 
 <style scoped>
 .header {
-    width: 100%;
     background: #f0f0f5;
     text-align: center;
 }
