@@ -17,17 +17,20 @@ export default {
     },
     data() {
         return {
-            todo: ''
+            todo: '',
+            id: 0
         }
     },
     methods: {
         addToDo() {
             const newToDo = {
                 todo: this.todo,
+                id: this.id,
                 completed: false
             }
             this.$emit('add-todo', newToDo);
             this.todo = '';
+            this.id++;
         }
     }
 }

@@ -3,9 +3,9 @@
         <div class="input">
             <ToDoInput msg="What would you like to do?" @add-todo="addToDo" />
         </div>
-        <div class="todolist" v-for="todo in toDoList"> 
+        <div class="todolist" v-for="todo in toDoList" v-bind:key="todo.id"> 
             <ul>
-                <li>{{ todo.todo }}</li>
+                <li> {{ todo.todo }} </li>
             </ul>
         </div>
     </div>
@@ -27,7 +27,6 @@ export default {
     methods: {
         addToDo(newToDo) {
             this.toDoList.push(newToDo);
-            console.log(this.toDoList);
         }
     }
 }
