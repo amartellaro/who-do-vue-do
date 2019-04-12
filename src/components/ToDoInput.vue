@@ -2,8 +2,8 @@
     <div class="input">
         <div class="message">{{ msg }}</div>
         <div class="form">
-            <form>
-                <input type="text">
+            <form @submit.prevent="addToDo">
+                <input type="text" v-model="todo">
             </form>
         </div>
     </div>
@@ -14,6 +14,21 @@ export default {
     name: 'ToDoInput',
     props: {
         msg: String
+    },
+    data() {
+        return {
+            todo: ''
+        }
+    },
+    methods: {
+        addToDo() {
+            const newToDo = {
+                todo: this.todo,
+                completed: false
+            }
+            this.$emit('add-todo', newToDo);
+            this.todo = '';
+        }
     }
 }
 </script>

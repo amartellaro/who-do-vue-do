@@ -1,19 +1,20 @@
 <template>
   <div id="app">
       <Header msg="Who do? Vue do!"/>
-      <ToDoInput msg="What would you like to do?"/>
+      <ToDos />
   </div>
 </template>
 
 <script>
 import Header from './components/layout/Header.vue'
-import ToDoInput from './components/ToDoInput.vue'
+import ToDos from './components/ToDos.vue'
+
 
 export default {
   name: 'app',
   components: {
     Header,
-    ToDoInput
+    ToDos
   }
 }
 </script>
